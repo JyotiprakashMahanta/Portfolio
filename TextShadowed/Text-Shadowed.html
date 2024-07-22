@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Binding</title>
+</head>
+<script>
+    function SizeChange(){
+        document.getElementById('msg').style.fontSize=document.getElementById('sizeSlider').value+"px";
+    }
+    function TextShadowed()
+    {
+        document.getElementById('msg').style.textShadow=`${document.getElementById("hSlider").value}px ${document.getElementById("vSlider").value}px ${document.getElementById("blurSlider").value}px ${document.getElementById('colorPicker').value}`;
+    }
+    function HorizontalShadowed(){
+        TextShadowed();
+    }
+    function VerticalShadowed(){
+        TextShadowed();
+    }
+    function BlurShadowed(){
+        TextShadowed();
+    }
+    function ColorChange(){
+        TextShadowed();
+    }
+</script>
+<body>
+    <fieldset>
+        <legend>Show-Attributes</legend>
+        <dl>
+            <dt>Font Size</dt>
+            <dd><input id="sizeSlider" onchange="SizeChange()" type="range" min="1" max="100" value="30"></dd>
+            <dt>Horizontal</dt>
+            <dd><input type="range" id="hSlider" onchange="HorizontalShadowed()" min="1" max="100" value="30"></dd>
+            <dt>Vertical</dt>
+            <dd><input type="range" id="vSlider" min="1" onchange="VerticalShadowed()" max="100" value="30"></dd>
+            <dt>Blur</dt>
+            <dd><input type="range" id="blurSlider"  min="1" onchange="BlurShadowed()" max="100" value="30"></dd>
+            <dt>Color</dt>
+            <dd><input type="color" onchange="ColorChange()" id="colorPicker"></dd>
+        </dl>  
+    </fieldset>
+    <p style="text-align: center;" id="msg">Text Formatting</p>
+</body>
+</html>

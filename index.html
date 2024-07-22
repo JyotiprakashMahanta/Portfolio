@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <style type="text/css">
+        * {
+            text-decoration: none;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        header {
+            width: 100%;
+            justify-content: space-between;
+            transition: 0.8s;
+            background-color: #0c0c31ab;
+            display: flex;
+            position:fixed;
+            padding: 10px;
+            
+        }
+
+        header .logo {
+            font-weight: 700;
+            color: #fff;
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.6s;
+        }
+        
+        header ul {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        header ul li {
+            list-style: none;
+        }
+
+        header ul li a {
+            position: relative;
+            margin: 0 25px;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 2px;
+            font-weight: 500px;
+            transition: 0.6s;
+            font-size: 25px;
+        }
+        .left {
+            background-position: center;
+            padding: 1rem;
+            transition: all .2s ease-in-out;
+            background-size: cover;
+            text-align: center;
+            width: 50%;
+            margin-top: 200px;
+        }
+
+        .right {
+            background-position: center;
+            padding: 1rem;
+            transition: all .2s ease-in-out;
+            background-size: cover;
+        }
+
+        .right img {
+            width: 100%;
+            border-radius: 12rem;
+        }
+        .centered img{
+            background-color: black;
+            height: 48%;
+            width: 48%;
+            margin-top: 25%;
+            justify-items: center;
+            justify-content: center;
+        }
+
+        .one {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 6.8fr 5.2fr;
+            height: 100vh;
+            background-image: url(background3.jpg);
+            background-size: cover;
+        }
+
+        .hi {
+            font-size: 4rem;
+            color: tomato;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .name {
+            font-size: 4rem;
+            font-weight: 400;
+            color: rgb(186, 240, 223);
+        }
+
+        .bio {
+            font-size: 4rem;
+            font-weight: 400;
+            color: rgb(214, 233, 214);
+            font-style: oblique;
+        }
+
+        .hi:hover {
+            color: aqua;
+            text-shadow: 3px 3px 3px white;
+        }
+
+        span {
+            padding: 3.8rem;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: wheat;
+            color: tomato;
+            padding: 1rem;
+        }
+
+        h2:hover {
+            color: black;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            word-spacing: 2px;
+        }
+
+        .about,
+        .project,
+        .contact {
+            border: 1px solid white;
+            justify-content: center;
+            padding: 10rem;
+        }
+        .contact{
+            background-image: url(A2-back.jpeg);
+        }
+        
+
+        .logoo {
+            margin: 25px;
+            border: 1px solid cyan;
+            background-color: darkblue;
+            justify-content: center;
+            justify-items: center;
+            border-radius: 50px;
+        }
+
+        .logoo:hover {
+            background-color: aqua;
+        }
+
+        .resume {
+            font-size: 1.0rem;
+            padding: 10px;
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            font-size: 22px;
+        }
+
+        .resume:hover {
+            color: darkblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 700;
+            font-style: oblique;
+        }
+
+        .font {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .download {
+            font-size: 1.2rem;
+        }
+
+        .home2 {
+            margin: 0 auto;
+            width: 49.7%;
+            text-align: center;
+            display: inline-block;
+            /* background-color: red; */
+            height: 400px;
+            padding: 10px;
+            color: #fff;
+            /* display: grid; */
+        }
+
+        .home2 p {
+            font-family: 'cabinRegular', arial, sans-serif, verdana;
+            /* color: #000000; */
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .center {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .home2_first img {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .home2_second img {
+            margin: 0 auto;
+            padding: 0;
+        }
+        .titels{
+            font-size: 15px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bolder;
+            color: aquamarine;
+            border-bottom: 1px dotted aqua;
+        }
+
+.btn{
+   position: relative;
+   background-color: transparent;
+   border: 1px solid rgb(247, 241, 241);
+   color:rgb(242, 240, 240);
+   padding: 12px 24px;
+   font-size: 16px;
+   text-transform: uppercase;
+   transition: color 400ms; 
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    display: inline-block;
+    background-color:rgb(232, 226, 226);
+    transform: scaleX(0);
+    transform-origin: right;
+    z-index: -1;
+    transition: transform 400ms;
+}
+.btn:hover a{
+    color: #131111;
+}
+.btn:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+        
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+.footer{
+    background-color: #000;
+    color: #ccc;
+    padding: 1.2rem;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer a{
+    border: 1px solid greenyellow;
+    border-radius: 50px;
+    padding: 20px;
+}
+.con:hover{
+    background-color: #ccc;
+    color: #000;
+}
+@media only screen and (max-width:900px){
+    /* .one{
+        grid-template-columns: ;
+    } */
+}
+@media only screen and (max-width:600px){
+    .one{
+        grid-template-columns: 12fr;
+    }
+}
+@media only screen and (max-width:200px){
+    /* .one{
+        grid-template-columns: ;
+    } */
+}
+
+</style>
+</head>
+
+<body background="2nd background.jpg">
+    <div>
+        <header>
+            <a href="#" class="logo">Personal Portfolio</a>
+            <ul>
+                <li><a  href="#">Home</a></li>
+                <li><a  href="#about">About</a></li>
+                <li><a  href="#project">Project</a></li>
+                <li><a  href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        <section class="one">
+            <div class="left">
+                <article>
+                    <h1 class="hi">Hi!</h1>
+                    <p class="name">I'm Jyotiprakash.</p>
+                    <p class="bio">UI Full Stack Developer.</p>
+                </article>
+            </div>
+            <div class="right">
+                <article class="centered">
+                    <img src="A-Profile.png" alt="profile">
+                </article>
+            </div>
+        </section>
+    </div>
+    <section class="two">
+        <h2 id="about">About Me</h2>
+        <div class="about">
+            <h3 style="text-align: center; background-color: turquoise; padding: .6rem; font-size: 1.5rem;">
+                <ul style="color: darkgreen;">Education</ul>
+            </h3>
+            <table border="1px" style="text-align: center; font-size: 1.5rem;">
+                <tr>
+                    <th>Scholling/Education</th>
+                    <th>Percentage %</th>
+                    <th>School/University</th>
+                </tr>
+                <tr>
+                    <td>10<sup>th</sup></td>
+                    <td>62%</td>
+                    <td>BSE</td>
+                </tr>
+                <tr>
+                    <td>12<sup>th</sup></td>
+                    <td>56%</td>
+                    <td>CHSE</td>
+                </tr>
+                <tr>
+                    <td>Pre Gradutation &#10088;BCA&#41;</td>
+                    <td>70%</td>
+                    <td>Utkal University</td>
+                </tr>
+                <tr>
+                    <td>Post Gradutation &#10088;MCA&#41;</td>
+                    <td>&#8331;&#8331;Pursuing&#8331;&#8331;</td>
+                    <td>Biju Patnaik University of Technology&#10088;BPUT&#41;</td>
+                </tr>
+            </table> <br>
+            <h3 style="text-align: center; background-color: turquoise; padding: .6rem; font-size: 1.5rem;">
+                <ul style="color: darkgreen;">Work Experience</ul>
+            </h3> <br>
+            <ul style="font-size: 1.5rem;">
+                <li>Fresher</li>
+            </ul> <br>
+            <h3 style="text-align: center; background-color: turquoise; padding: .6rem; font-size: 1.5rem;">
+                <ul style="color: darkgreen;">Hobbise</ul>
+            </h3> <br>
+            <ul style="font-size: 1.5rem;">
+                <li>Book Reading</li>
+                <li>Living Fitness</li>
+                <li>Learing New Technology</li>
+            </ul>
+            <div class="logoo"><a href="Jyoti-UI.pdf">
+                    <div class="resume">RESUME</div>
+                </a>
+            </div>
+            <div class="font">&#8682;
+                <div class="download">Click Here to See....</div>
+            </div>
+        </div>
+    </section>
+    <section class="three">
+        <h2 id="project">My Project</h2>
+        <div class="project">
+            <div class="center">
+                <div class="home2">
+                    <div class="home2_first">
+                        <p class="titels">1 : Interactive Resume</p> <br>
+                        <img src="I-resume.png" height="150px" width="150px" />
+                        <p> Create an interactive online resume using HTML, CSS, and JavaScript. going beyond the traditional paper resume format.</p>
+                    </div>
+                    <!-- <button class="btn">look</button> -->
+                    <button class="btn"><a href="resume-index.html">look</a></button>
+                </div>
+                <div class="home2">
+                    <div class="home2_second">
+                        <p class="titels">2 : Movie Ticket Booking</p> <br>
+                        <img src="movie-ticket.jpg" height="150px" width="150px" />
+                        <p>Developed an online Movie Ticket Booking system using HTML, CSS, and JavaScript, enhancing user experience and interactivity.</p>
+                    </div>
+                    <button class="btn"><a href="inox-index.html">look</a></button>
+                </div>
+
+                <div class="home2">
+                    <div class="home2_second">
+                        <p class="titels">3 : EMI Calculator</p> <br>
+                        <img src="emi-calculator.png" height="150px" width="150px" />
+                        <p>Developed an EMI Calculator using HTML, CSS, and JavaScript to simplify loan calculations and enhance user experience.</p>
+                    </div>
+                    <button class="btn"><a href="EMI-cal.html">look</a></button>
+                </div>
+
+                <div class="home2">
+                    <div class="home2_second">
+                        <p class="titels">4 : Text Reflection</p> <br>
+                        <img src="reflection-text-effect_904484-69.avif" height="150px" width="150px" />
+                        <p>Created the "Text Reflection" project with HTML, CSS, and JavaScript, adding unique, interactive text visualization features.</p>
+                    </div>
+                    <button class="btn"><a href="Text-Shadowed.html">look</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="four">
+            <h2>Contact</h2>
+        <div class="contact" id="contact">
+            <div class="container" style="background-color: rgb(22, 21, 20);">
+                <form >
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" style="color: #000;" placeholder="Your name..">
+              
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" style="color: #000;" placeholder="Your last name..">
+              
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Enter your email" style="color: #000;">
+              
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;color: black;"></textarea>
+              
+                  <input type="submit"  onclick="Submit()">
+                  <p id="demo"></p>
+                </form>
+              </div>
+        </div>
+        </section>
+        <footer class="footer">
+            <a class="con" href="tel:8260275927">Call</a>
+            <a class="con" href="mailto:07jyotiprakash">Gmail</a>
+            <a class="con" href="https://www.linkedin.com/in/jyotiprakash-mahanta-b21888275/">Linkdin</a>
+            <a class="con" href="https://github.com/JyotiprakashMahanta">Github</a>
+        </footer>
+    <script>
+        function Submit(){
+            document.getElementById('demo').innerHTML="message sent sucefully";
+        }
+    </script>
+</body>
+
+</html>

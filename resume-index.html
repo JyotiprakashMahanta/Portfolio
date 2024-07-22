@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="texxtt.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Interactive Resume</a>
+
+        <i class='bx bx-menu' id="menu-icons"></i>
+
+        <nav class="navbar">
+            <a href="#personal">Personal Information</a>
+            <a href="#resume">Resume Sections</a>
+            <a href="#reach">Reach Me</a>
+        </nav>
+    </header>
+
+    <section class="home" id="personal">
+        <div class="division">
+            <div id="left">
+                <div class="home-content">
+                    <h3>Jyotiprakash Mahanta</h3>
+                    <div class="social-media">
+                        <a href="tel:8260271527"><i class='bx bx-phone'></i></a>
+                        <a href="mailto:07jyotiprakash@gmail.com"><i class='bx bxl-gmail'></i></a>
+                        <a href="https://www.linkedin.com/in/jyotiprakash-mahanta-b21888275/"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/JyotiprakashMahanta"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.facebook.com/facebookIndia/?brand_redir=20531316728"><i class='bx bxl-facebook'></i></a>
+                    </div>
+                    <a href="Jyoti-UI.pdf" class="btn">Download CV</a>
+                </div>
+            </div>
+            <div id="right">
+                <fieldset>
+                    <p>
+                &nbsp;&nbsp;&nbsp;Recently, I graduated with a Bachelor of Computer Application (BCA) from the Academy of Management and Information Technology (AMIT). My education has provided me with a strong foundation in various aspects of computer science, including programming languages, software development methodologies, and database management systems (DBMS).
+                         <br><br> <br>
+                 I am passionate about solving real-world problems and enhancing user experiences. During my time at university, I actively participated in the Student Enrollment Management System project, where I demonstrated my skills in teamwork, communication, and problem-solving.
+                <br> <br> <br>
+                 To stay current, I am committed to continuous learning and keeping up with the latest technologies. I regularly practice problem-solving through coding exercises on platforms like LeetCode and HackerRank. Additionally, I have gained practical experience through internships in web development.
+                    </p>
+                </blo>
+            </div>
+        </div>
+        <hr class="hr">
+    </section>
+    <hr class="hr">    
+    <section class="resume" id="resume">
+        <div>
+            <span id="head"><i class='bx bxs-graduation'></i>&nbsp;&nbsp;Education</span>
+            <p class="sub-head">
+            * 2017-2018 Panchayat High School with 62%. (10th)<br>
+            * 2018-2020 Saikrupa Residential College with 56.5%. (12th) <br>
+            * 2020-2023 Bachelor of Computer Application with 70.2% || 7.70 CGPA.
+            </p>
+        </div>
+        <div class="work-experience">
+            <span id="head"><i class='bx bxs-briefcase'></i>&nbsp;&nbsp;Work Experience</span>
+             <p class="sub-head">* Fresher</p>
+        </div>
+        <div class="skills">
+            <span id="head"><i class='bx bxs-cog'></i>&nbsp;&nbsp;Skills</span>
+            <p class="sub-head">
+                I am passionate about solving real-world problems and enhancing user experiences. During my time at university, I actively participated in the Student Enrollment Management System project, where I demonstrated my skills in teamwork, communication, and problem-solving.
+            </p>
+        </div>
+        <div class="cartificate">
+            <span id="head"><i class='bx bxs-certification' ></i>&nbsp;&nbsp;Cartification</span>
+            <p class="sub-head">
+                A. Full Stack Web Devloper By Sudhakar Sharma (NareshIT, Hyderabad, 2024)<br>
+                B. Core Java By Hare Krishna (NareshIT, Hyderabad, 2024)<br>
+                C. Oracle By Sudhakar L (NareshIT, Hyderabad, 2024)<br>
+            </p>
+        </div>
+        <div class="projrct">
+            <span id="head"><i class='bx bx-code-block'></i>&nbsp;&nbsp;Project</span>
+            <p class="sub-head">
+                <div class="project">
+                    <a href="Text-Shadowed.html">1. Text Reflection</a> <br>
+                    <a href="inox-index.html">2. Cinema Ticket Reservation</a> <br>
+                    <a href="EMI-cal.html">3. EMI Calculator</a>                     
+                </div>
+            </p>
+        </div>
+    </section>
+    <section class="contact" id="reach">
+        <hr class="hr">
+        <button class="btn-open-popup" onclick="togglePopup()"> 
+            Looking Forward to Our Chat 
+            </button> 
+        
+          <div id="popupOverlay" 
+               class="overlay-container"> 
+              <div class="popup-box"> 
+                  <form class="form-container"> 
+                      <label class="form-label" 
+                             for="name"> 
+                        Username: 
+                        </label> 
+                      <input class="form-input" type="text" 
+                             placeholder="Enter Your Username" 
+                             id="name" name="name" required> 
+        
+                      <label class="form-label" for="email">Email:</label> 
+                      <input class="form-input"
+                             type="email" 
+                             placeholder="Enter Your Email"
+                             id="email" 
+                             name="email" required> 
+        
+                      <button class="btn-submit" 
+                              type="submit"> 
+                        Submit 
+                        </button> 
+                  </form> 
+        
+                  <button class="btn-close-popup" 
+                          onclick="togglePopup()"> 
+                    Close 
+                    </button> 
+              </div> 
+          </div> 
+
+          <button><a href="portfolio-index.html"></a></button>
+        
+          <script> 
+              function togglePopup() { 
+                  const overlay = document.getElementById('popupOverlay'); 
+                  overlay.classList.toggle('show'); 
+              } 
+          </script>
+          <button class="btn-open-popup"><a href="index.html">Back to Home Page</a></button>
+    </section>
+</body>
+
+</html>
